@@ -9,7 +9,7 @@
 
 
 
-//Первый блок
+//First block
 
 int byte_plus(int number);
 int byte_minus(int number);
@@ -67,16 +67,16 @@ int byte_minus(int number)
 
 void first_task()
 {
-    std::cout << "\nВы выбрали первое задание!\n";
-    std::cout << "Первое задание: Вывести, сколько памяти (в байтах) на вашем компьютере отводится под различные типы данных со спецификаторами и без: int, short int, long int, float, double, long double, char и bool.\n";
-    std::cout << "В типе int " << sizeof(int) << " байта.\n";
-    std::cout << "В типе short int " << sizeof(short int) << " байта.\n";
-    std::cout << "В типе long int " << sizeof(long int) << " байта.\n";
-    std::cout << "В типе float " << sizeof(float) << " байта.\n";
-    std::cout << "В типе double " << sizeof(double) << " байтов.\n";
-    std::cout << "В типе long double " << sizeof(long double) << " байтов.\n";
-    std::cout << "В типе char " << sizeof(char) << " байт.\n";
-    std::cout << "В типе bool " << sizeof(bool) << " байт.\n";
+    std::cout << "\nYou choose first task!\n";
+    std::cout << "First task: Write out v of memory (in bytes) on your computer for different types of data: int, short int, long int, float, double, long double, char и bool.\n";
+    std::cout << "In type int " << sizeof(int) << " bytes.\n";
+    std::cout << "In type short int " << sizeof(short int) << " bytes.\n";
+    std::cout << "In type long int " << sizeof(long int) << " bytes.\n";
+    std::cout << "In type float " << sizeof(float) << " bytes.\n";
+    std::cout << "In type double " << sizeof(double) << " bytes.\n";
+    std::cout << "In type long double " << sizeof(long double) << " bytes.\n";
+    std::cout << "In type char " << sizeof(char) << " byte.\n";
+    std::cout << "In type bool " << sizeof(bool) << " byte.\n";
 }
 
 void second_task(int number)
@@ -117,7 +117,7 @@ void second_task(int number)
     {
         cnt = 0;
         number = save;
-        std::cout << "\nОбратный код: " << sign_number << ' ';
+        std::cout << "\nReverse code: " << sign_number << ' ';
         two_in_degree = 1073741824;
         while (two_in_degree)
         {
@@ -140,7 +140,7 @@ void second_task(int number)
         two_in_degree = 1073741824;
         cnt = 0;
         number = save - 1;
-        std::cout << "\nДополнительный код: " << sign_number << ' ';
+        std::cout << "\nAdd code: " << sign_number << ' ';
         while (two_in_degree)
         {
             cnt += 1;
@@ -398,21 +398,21 @@ void forth_task(double number)
 
 void first_main()
 {
-    std::cout << "Привет!\n";
+    std::cout << "Hello!\n";
     int number;
     int int_num;
     float float_num;
     double double_num;
     number = 7;
-    std::cout << "\n1) Вывести, сколько памяти (в байтах) на вашем компьютере отводится под различные типы данных со спецификаторами и без: int, short int, long int, float, double, long double, char и bool.\n";
-    std::cout << "2) Вывести на экран двоичное представление в памяти(все разряды) целого числа. При выводе необходимо визуально обозначить знаковый разряд и значащие разряды отступами или цветом.\n";
-    std::cout << "3) Вывести на экран двоичное представление в памяти(все разряды) типа float. При выводе необходимо визуально обозначить знаковый разряд мантиссы, знаковый разряд порядка(если есть), мантиссу и порядок.\n";
-    std::cout << "4) Вывести на экран двоичное представление в памяти(все разряды) типа double. При выводе необходимо визуально обозначить знаковый разряд мантиссы, знаковый разряд порядка(если есть), мантиссу и порядок.\n";
-    std::cout << "0) Закончить программу.\n";
+    std::cout << "\n1) Write v of memory (in bytes) on your computer for different types of data: int, short int, long int, float, double, long double, char и bool.\n";
+    std::cout << "2) Write all orders of integer number.\n";
+    std::cout << "3) Write all orders of float number\n";
+    std::cout << "4) Write all orders of double number\n";
+    std::cout << "0) Exit.\n";
     try {
         while (number != 0)
         {
-            std::cout << "\nВыбери номер: ";
+            std::cout << "\nWrite number: ";
             std::cin >> number;
             if (!std::cin)
             {
@@ -423,9 +423,9 @@ void first_main()
             {
             case 1: first_task();
                 break;
-            case 2: std::cout << "\nВы выбрали второе задание!\n";
-                std::cout << "Вывести на экран двоичное представление в памяти(все разряды) целого числа. При выводе необходимо визуально обозначить знаковый разряд и значащие разряды отступами или цветом.\n";
-                std::cout << "Введите число: ";
+            case 2: std::cout << "\nYou choose second task!\n";
+                std::cout << "Write all orders of intenger number.\n";
+                std::cout << "Write number: ";
                 std::cin >> int_num;
                 second_task(int_num);
                 if (!std::cin)
@@ -433,9 +433,9 @@ void first_main()
                     throw "ex";
                 }
                 break;
-            case 3: std::cout << "\nВы выбрали третье задание!\n";
-                std::cout << "Вывести на экран двоичное представление в памяти(все разряды) типа float. При выводе необходимо визуально обозначить знаковый разряд мантиссы, знаковый разряд порядка(если есть), мантиссу и порядок.\n";
-                std::cout << "Введите число: ";
+            case 3: std::cout << "\nYou choose third task!\n";
+                std::cout << "Write all orders of float number.\n";
+                std::cout << "Write number: ";
                 std::cin >> float_num;
                 third_task(float_num);
                 if (!std::cin)
@@ -443,9 +443,9 @@ void first_main()
                     throw "ex";
                 }
                 break;
-            case 4: std::cout << "\nВы выбрали четвёртое задание!\n";
-                std::cout << "Вывести на экран двоичное представление в памяти (все разряды) типа double. При выводе необходимо визуально обозначить знаковый разряд мантиссы, знаковый разряд порядка (если есть), мантиссу и порядок. (*)\n";
-                std::cout << "Введите число: ";
+            case 4: std::cout << "\nYou choose forth task!\n";
+                std::cout << "Write all orders of double number.\n";
+                std::cout << "Write number: ";
                 std::cin >> double_num;
                 if (!std::cin)
                 {
@@ -458,13 +458,13 @@ void first_main()
     }
     catch (...)
     {
-        std::cout << "\nНекорректные данные!\n";
+        std::cout << "\nWrong data!\n";
     }
 }
 
 
 
-//Второй блок
+//Second block
 
 void quick_sort(int* arr, int start, int finish);
 int left_binary(int* arr, int number);
@@ -586,7 +586,7 @@ int brute_force(int* arr, int check, int number)
     }
     if (check == 2)
     {
-        std::cout << "Индексы:";
+        std::cout << "Indexes:";
         for (int i = 0; i < 100; i++)
         {
             if (arr[i] == number)
@@ -725,25 +725,24 @@ void dop_task(int* arr, int* s_arr)
                 }
             }
         }
-        std::cout << "Элементов, делящихся нацело на " << i << ": " << cnt << '\n';
+        std::cout << "Elements devides on " << i << ": " << cnt << '\n';
     }
 }
 
 int second_main()
 {
-    setlocale(LC_ALL, "Russian");
-    std::cout << "Привет!\n";
+    std::cout << "Hello!\n";
     int number = 9;
-    std::cout << "\n1) Создать целочисленный массив размерности N = 100. Элементы массивы должны принимать случайное значение в диапазоне от -99 до 99.\n";
-    std::cout << "2) Отсортировать заданные в пункте 1 элементы массива quick sort сортировкой (от меньшего к большему). Определить время, затраченное на сортировку, используя библиотеку chrono.\n";
-    std::cout << "3) Найти максимальный и минимальный элемент массива. Подсчитайте время поиска этих элементов в отсортированном массиве и неотсортированном, используя библиотеку chrono.\n";
-    std::cout << "4) Вывести среднее значение (если необходимо, число нужно округлить) максимального и минимального значения. Вывести индексы всех элементов, которые равны этому значению, и их количество.\n";
-    std::cout << "5) Вывести количество элементов в отсортированном массиве, которые меньше числа a, которое инициализируется пользователем.\n";
-    std::cout << "6) Вывести количество элементов в отсортированном массиве, которые больше числа b, которое инициализируется пользователем.\n";
-    std::cout << "7) Вывести информацию о том, есть ли введенное пользователем число в отсортированном массиве. Реализуйте алгоритм бинарного поиска. Сравнить скорость его работы с обычным перебором. (*)\n";
-    std::cout << "8) Поменять местами элементы массива, индексы которых вводит пользователь. Вывести скорость обмена, используя библиотеку chrono.\n";
-    std::cout << "9) Заменить каждый элемент массива суммой значений текущего и следующего элемента. Присвоить каждому элементу случайный номер в массиве. Вывести количество элементов, которые нацело делятся на 1, 2, 3, 4, 5, 6, 7, 8, 9\n";
-    std::cout << "0) Закончить программу.\n";
+    std::cout << "\n1) Make array sie of N = 100. Elements of array become random numbers from -99 to 99.\n";
+    std::cout << "2) Sort elements of array by quick sort(from the list to the biggest).Measure time by the chrono library.\n";
+    std::cout << "3) Find minimum and maximum elements of array. Measure time of search in sorted and unsorted arrays by chrono.\n";
+    std::cout << "4) Write middle number of minimum and maximum elements in array. Write indexes of all elements same with it and count them.\n";
+    std::cout << "5) Count number of elements less than a (writen by user) in sorted array.\n";
+    std::cout << "6) Count number of elements more than b (writen by user) in sorted array.\n";
+    std::cout << "7) Write information about was number written by user in array or not. use binary search. Compary it speed with one's of linear search. (*)\n";
+    std::cout << "8) Change places of array's elements (user writes indexes). Measure time by chrono.\n";
+    std::cout << "9) Change every element by summ of itself and next element. Give tham random places. Write number of elements deviding on 1, 2, 3, 4, 5, 6, 7, 8, 9\n";
+    std::cout << "0) Exit program.\n";
     bool if_arr = 0;
     short int if_sort = 0;
     int arr[100];
@@ -753,7 +752,7 @@ int second_main()
     try {
         while (number != 0)
         {
-            std::cout << "\nВыбери номер: ";
+            std::cout << "\nWrite number: ";
             std::cin >> number;
             if (!std::cin)
             {
@@ -762,7 +761,7 @@ int second_main()
             std::cout << '\n';
             switch (number)
             {
-            case 1: std::cout << "\nВы выбрали первое задание!\nСоздать целочисленный массив размерности N = 100. Элементы массивы должны принимать случайное значение в диапазоне от -99 до 99.\n";
+            case 1: std::cout << "\n1) Make array sie of N = 100. Elements of array become random numbers from -99 to 99.\n";
                 fill_array(arr, s_arr);
                 show_array(arr);
                 if_arr = 1;
@@ -770,8 +769,7 @@ int second_main()
                 break;
             case 2:
             {
-                std::cout << "\nВы выбрали второе задание!\n";
-                std::cout << "Отсортировать заданные в пункте 1 элементы массива quick sort сортировкой (от меньшего к большему). Определить время, затраченное на сортировку, используя библиотеку chrono.\n";
+                std::cout << "\n2) Sort elements of array by quick sort(from the list to the biggest).Measure time by the chrono library.\n";
                 if (!if_arr)
                 {
                     fill_array(arr, s_arr);
@@ -789,8 +787,7 @@ int second_main()
             }
             case 3:
             {
-                std::cout << "\nВы выбрали третье задание!\n";
-                std::cout << "Найти максимальный и минимальный элемент массива. Подсчитайте время поиска этих элементов в отсортированном массиве и неотсортированном, используя библиотеку chrono.\n";
+                std::cout << "Find minimum and maximum elements of array. Measure time of search in sorted and unsorted arrays by chrono.\n";
                 if (!if_arr)
                 {
                     fill_array(arr, s_arr);
@@ -806,18 +803,17 @@ int second_main()
                 max_min(s_arr);
                 auto t_end = std::chrono::high_resolution_clock::now();
                 std::chrono::duration< double > t_cnt = t_end - t_start;
-                std::cout << "\nНа нахождение минимума и максимума в неотстортированном массиве ушло " << std::fixed << t_cnt.count() << " секунд\n";
+                std::cout << "\nOn search min and max elements in unsorted array was taken " << std::fixed << t_cnt.count() << " seconds\n";
                 t_start = std::chrono::high_resolution_clock::now();
                 int min = arr[0];
                 int max = arr[99];
                 t_end = std::chrono::high_resolution_clock::now();
                 t_cnt = t_end - t_start;
-                std::cout << "На нахождение минимума и максимума в отстортированном массиве ушло " << std::fixed << t_cnt.count() << " секунд\n";
+                std::cout << "\nOn search min and max elements in sorted array was taken " << std::fixed << t_cnt.count() << " seconds\n";
                 break;
             }
             case 4:
-                std::cout << "\nВы выбрали четвёртое задание!\n";
-                std::cout << "Вывести среднее значение (если необходимо, число нужно округлить) максимального и минимального значения. Выводит индексы всех элементов, которые равны этому значению, и их количество.\n";
+                std::cout << "4) Write middle number of minimum and maximum elements in array. Write indexes of all elements same with it and count them.\n";
                 if (!if_arr)
                 {
                     fill_array(arr, s_arr);
@@ -825,11 +821,10 @@ int second_main()
                     if_arr = 1;
                 }
                 mid = max_min(arr, 1);
-                std::cout << "Среднее минимального и максимального элементов равно " << mid << ". Чисел, равных ему, " << brute_force(arr, 2, mid) << ".\n";
+                std::cout << "Middle number of minimum and maximum elements in array is " << mid << ". Number of same elements is " << brute_force(arr, 2, mid) << ".\n";
                 break;
             case 5:
-                std::cout << "\nВы выбрали пятое задание!\n";
-                std::cout << "Вывести количество элементов в отсортированном массиве, которые меньше числа a, которое инициализируется пользователем.\n";
+                std::cout << "Count number of elements less than a (writen by user) in sorted array.\n";
                 if (!if_arr)
                 {
                     fill_array(arr, s_arr);
@@ -842,17 +837,16 @@ int second_main()
                     show_array(arr);
                     if_sort = 1;
                 }
-                std::cout << "Введите число: ";
+                std::cout << "Write number: ";
                 std::cin >> a;
                 if (!std::cin)
                 {
                     throw "ex";
                 }
-                std::cout << "Количество элементов меньше числа " << a << " равно " << left_binary(arr, a) << ".\n";
+                std::cout << "Number of elements less than " << a << " is " << left_binary(arr, a) << ".\n";
                 break;
             case 6:
-                std::cout << "\nВы выбрали шестое задание!\n";
-                std::cout << "Вывести количество элементов в отсортированном массиве, которые больше числа b, которое инициализируется пользователем.\n";
+                std::cout << "Count number of elements more than b (writen by user) in sorted array.\n";
                 if (!if_arr)
                 {
                     fill_array(arr, s_arr);
@@ -865,18 +859,17 @@ int second_main()
                     show_array(arr);
                     if_sort = 1;
                 }
-                std::cout << "Введите число: ";
+                std::cout << "Write number: ";
                 std::cin >> b;
                 if (!std::cin)
                 {
                     throw "ex";
                 }
-                std::cout << "Количество элементов больше числа " << b << " равно " << 100 - right_binary(arr, b) << ".\n";
+                std::cout << "Number of elements more than b " << b << " is " << 100 - right_binary(arr, b) << ".\n";
                 break;
             case 7:
             {
-                std::cout << "\nВы выбрали седьмое задание!\n";
-                std::cout << "Вывести информацию о том, есть ли введенное пользователем число в отсортированном массиве. Реализовать алгоритм бинарного поиска. Сравнить скорость его работы с обычным перебором. (*)\n";
+                std::cout << "Write information about was number written by user in array or not. use binary search. Compary it speed with one's of linear search. (*)\n";
                 if (!if_arr)
                 {
                     fill_array(arr, s_arr);
@@ -889,7 +882,7 @@ int second_main()
                     show_array(arr);
                     if_sort = 1;
                 }
-                std::cout << "Введите число: ";
+                std::cout << "Write number: ";
                 std::cin >> a;
                 if (!std::cin)
                 {
@@ -899,30 +892,29 @@ int second_main()
                 cnt = right_binary(arr, a) - left_binary(arr, a);
                 auto t_end = std::chrono::high_resolution_clock::now();
                 std::chrono::duration< double > t_cnt = t_end - t_start;
-                std::cout << "Количество элементов равных " << a << " равно " << cnt << ".\n";
-                std::cout << "В отсортированном массиве на бинарный поиск уходит " << std::fixed << t_cnt.count() << " секунд\n";
+                std::cout << "Number of elements same with " << a << " id " << cnt << ".\n";
+                std::cout << "On binary search in sorted array was taken " << std::fixed << t_cnt.count() << " seconds\n";
                 t_start = std::chrono::high_resolution_clock::now();
                 brute_force(s_arr, 4, a);
                 t_end = std::chrono::high_resolution_clock::now();
                 t_cnt = t_end - t_start;
-                std::cout << "В неотсортированном массиве на перебор уходит " << std::fixed << t_cnt.count() << " секунд\n";
+                std::cout << "On binary search in unsorted array was taken " << std::fixed << t_cnt.count() << " seconds\n";
                 break;
             }
             case 8:
             {
-                std::cout << "\nВы выбрали восьмое задание!\n";
-                std::cout << "Поменять местами элементы массива, индексы которых вводит пользователь. Выведите скорость обмена, используя библиотеку chrono.\n";
+                std::cout << "Change places of array's elements (user writes indexes). Measure time by chrono.\n";
                 if (!if_arr)
                 {
                     fill_array(arr, s_arr);
                     show_array(arr);
                     if_arr = 1;
                 }
-                std::cout << "Введите два числа - индексы массива: ";
+                std::cout << "Write two indexes of array: ";
                 std::cin >> a >> b;
                 if ((a < 0) or (a > 99) or (b < 0) or (b > 99))
                 {
-                    std::cout << "Индексы введены некорректно. Это должны быть целые числа в диапазоне от 0 до 99";
+                    std::cout << "Indexes were written wrong. They must be integer numbers from 0 to 99";
                 }
                 else
                 {
@@ -936,14 +928,13 @@ int second_main()
                     temp = s_arr[a];
                     s_arr[a] = s_arr[b];
                     s_arr[b] = temp;
-                    std::cout << "На замену переменных уходит " << std::fixed << t_cnt.count() << " секунд\n";
+                    std::cout << "On changig elements was taken " << std::fixed << t_cnt.count() << " seconds\n";
                 }
                 break;
             }
             case 9:
             {
-                std::cout << "\nВы выбрали девятое задание!\n";
-                std::cout << "Заменить каждый элемент массива суммой значений текущего и следующего элемента. Присвоить каждому элементу случайный номер в массиве. Вывести количество элементов, которые нацело делятся на 1, 2, 3, 4, 5, 6, 7, 8, 9\n";
+                std::cout << "Change every element by summ of itself and next element. Give tham random places. Write number of elements deviding on 1, 2, 3, 4, 5, 6, 7, 8, 9\n";
                 if (!if_arr)
                 {
                     fill_array(arr, s_arr);
@@ -957,7 +948,7 @@ int second_main()
     }
     catch (...)
     {
-        std::cout << "\nНекорректные данные!\n";
+        std::cout << "\nWrong data!\n";
     }
 }
 
@@ -1187,7 +1178,6 @@ void sort_matrix(int* arr, int matrix_size)
 
 int third_main()
 {
-    setlocale(LC_ALL, "Russian");
     std::cout << "Привет!\n";
     int number = 5;
     srand(time(NULL));
@@ -1589,7 +1579,6 @@ void boyer_mur(char sentence[][14], int len, std::string x)
 
 int forth_main()
 {
-    setlocale(LC_ALL, "Russian");
     std::cout << "Hi!\n";
     std::string x;
     char sentence[50][14];
@@ -1647,11 +1636,12 @@ int forth_main()
 int main()
 {
 	int number = 5;
+    setlocale(LC_ALL, "Russian");
 	try
 	{
 		while (number)
 		{
-			std::cout << "Write 1, 2, 3 or 4: 1 - for work with bytes, 2 - for work with sort, 3 - for work with arrays, f - for work with strings: ";
+			std::cout << "Write 1, 2, 3 or 4: 1 - for work with bytes, 2 - for work with sort, 3 - for work with arrays, 4 - for work with strings, 0 - to exit: ";
 			std::cin >> number;
 			if (!std::cin) throw ("ex");
             switch (number)
