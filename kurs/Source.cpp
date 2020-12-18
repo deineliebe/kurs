@@ -1411,10 +1411,12 @@ void check_elem_sign(char* word, int len_word)
     }
 }
 
+//Function checking letters
 void check_elem_letter(char* word, int len_word)
 {
     for (int i = 1; i < len_word; i++)
     {
+        //If element (not first) is in upper register, it changes on a same element, but in lower one
         if (((int)(word[i]) > 64) and ((int)(word[i]) < 91))
         {
             word[i] = (char)((int)(word[i]) + 32);
