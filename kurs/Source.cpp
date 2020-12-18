@@ -1405,9 +1405,9 @@ void check_elem_sign(char* word, int len_word)
         //Long if: watches char codes in ASCII: 65-91 are low letters, 91-123 - in upper register, 47-58 - numbers
         //So program count every sumbols which are not them
         if (!(((((int)(word[i]) > 64) and (int)(word[i]) < 91)) or (((int)(word[i]) > 96) and ((int)(word[i]) < 123))) or ((int)(word[i]) > 47 and (int)(word[i]) < 58)) cnt += 1;
-        else cnt = 0;
+        //if signes more than one (except three dots) element becomes NULL
         if ((cnt == 2 and word[i + 1] != '.') or (cnt > 3)) word[i] = NULL;
-        i += 1;
+        i++;
     }
 }
 
