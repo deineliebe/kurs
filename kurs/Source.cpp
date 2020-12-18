@@ -954,7 +954,7 @@ int second_main()
 
 
 
-//Третий блок
+//Third block
 
 void show_matrix(int* arr, int matrix_size);
 void fill_like_snake(int arr[100], int matrix_size);
@@ -1333,7 +1333,7 @@ int third_main()
 
 
 
-//Четвёртый блок
+//Forth block
 void show_sentence(char sentence[][14], int len);
 void delete_sentence(char sentence[][14], int len);
 void show_sentence_from_last_elem(char sentence[][14], int len);
@@ -1629,7 +1629,7 @@ int forth_main()
 
 
 
-//Выбор
+//Choose
 
 
 
