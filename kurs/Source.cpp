@@ -1367,6 +1367,7 @@ void show_sentence(char sentence[][14], int len)
     std::cout << '\n';
 }
 
+//This function makes all elements of array NULL. Uses after filling sentence
 void delete_sentence(char sentence[][14], int len)
 {
     for (int i = 0; i < len; i++)
@@ -1394,12 +1395,15 @@ void show_sentence_from_last_elem(char sentence[][14], int len)
     std::cout << '\n';
 }
 
+//Function checking signes
 void check_elem_sign(char* word, int len_word)
 {
     int cnt = 0;
     int i = 0;
     while (word[i] != NULL)
     {
+        //Long if: watches char codes in ASCII: 65-91 are low letters, 91-123 - in upper register, 47-58 - numbers
+        //So program count every sumbols which are not them
         if (!(((((int)(word[i]) > 64) and (int)(word[i]) < 91)) or (((int)(word[i]) > 96) and ((int)(word[i]) < 123))) or ((int)(word[i]) > 47 and (int)(word[i]) < 58)) cnt += 1;
         else cnt = 0;
         if ((cnt == 2 and word[i + 1] != '.') or (cnt > 3)) word[i] = NULL;
