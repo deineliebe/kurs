@@ -1178,14 +1178,14 @@ void sort_matrix(int* arr, int matrix_size)
 
 int third_main()
 {
-    std::cout << "Привет!\n";
+    std::cout << "Hello!\n";
     int number = 5;
     srand(time(NULL));
-    std::cout << "\n1. Используя арифметику указателей, заполнить квадратичную целочисленную матрицу порядка N (6,8,10) случайными числами от 1 до  N*N по двум схемам.\n";
-    std::cout << "2. Получить новую матрицу, из матрицы п. 1, переставляя ее блоки в соответствии с четырьмя схемами.\n";
-    std::cout << "3. Используя арифметику указателей, отсортировать элементы любой сортировкой.\n";
-    std::cout << "4. Уменьшает, увеличивает, умножает или делит все элементы матрицы на введенное пользователем число.\n";
-    std::cout << "0. Завершить программу.\n";
+    std::cout << "\n1. Fill matrix of size N (6,8,10) random numbers from 1 to  N*N.\n";
+    std::cout << "2. Give new matrix from the one from punkt 1.\n";
+    std::cout << "3. Sort elements.\n";
+    std::cout << "4. Minus, plus, multiply and divide elements of matrix on a number written by user\n";
+    std::cout << "0. Exit program.\n";
     bool if_arr, filling_method;
     int arr[100];
     if_arr = 0;
@@ -1193,13 +1193,13 @@ int third_main()
     try {
         while (!if_arr)
         {
-            std::cout << "\n1. Используя арифметику указателей, заполнить квадратичную целочисленную матрицу порядка N (6,8,10) случайными числами от 1 до  N*N по двум схемам.\n";
-            std::cout << "Выберите число: 6, 8, 10: ";
+            std::cout << "\n1. Fill matrix of size N (6,8,10) random numbers from 1 to  N*N.\n";
+            std::cout << "Choose number: 6, 8, 10: ";
             std::cin >> matrix_size;
             if (!std::cin) throw "ex";
             if ((matrix_size == 6) or (matrix_size == 8) or (matrix_size == 10))
             {
-                std::cout << "Нажмите 0, если хотите вывести матрицу спиралью, 1 - если змейкой: ";
+                std::cout << "Write 0, if you want to write matrix by spiral, 1 - if like snake: ";
                 std::cin >> filling_method;
                 if (!std::cin) throw "ex";
                 if (filling_method) fill_like_snake(arr, matrix_size);
@@ -1208,12 +1208,12 @@ int third_main()
             }
             else
             {
-                std::cout << "Вы ввели некорректное число\n";
+                std::cout << "You write wrong number\n";
             }
         }
         while (number != 0)
         {
-            std::cout << "\nВыбери номер: ";
+            std::cout << "\nWrite number: ";
             std::cin >> number;
             if (!std::cin)
             {
@@ -1222,13 +1222,13 @@ int third_main()
             std::cout << '\n';
             switch (number)
             {
-            case 1: std::cout << "\n1. Используя арифметику указателей, заполнить квадратичную целочисленную матрицу порядка N (6,8,10) случайными числами от 1 до  N*N по двум схемам.\n";
-                std::cout << "Выберите число: 6, 8, 10: ";
+            case 1: std::cout << "\n1. Fill matrix of size N (6,8,10) random numbers from 1 to  N*N.\n";
+                std::cout << "Choose number: 6, 8, 10: ";
                 std::cin >> matrix_size;
                 if (!std::cin) throw "ex";
                 if ((matrix_size == 6) or (matrix_size == 8) or (matrix_size == 10))
                 {
-                    std::cout << "Нажмите 0, если хотите вывести матрицу спиралью, 1 - если змейкой: ";
+                    std::cout << "Write 0, if you want to write matrix by spiral, 1 - if like snake: ";
                     std::cin >> filling_method;
                     if (!std::cin) throw "ex";
                     if (filling_method)
@@ -1242,11 +1242,11 @@ int third_main()
                 }
                 else
                 {
-                    std::cout << "Вы ввели некорректное число\n";
+                    std::cout << "You write wrong number\n";
                 }
                 break;
-            case 2: "\n2. Получить новую матрицу, из матрицы п. 1, переставляя ее блоки в соответствии с четырьмя схемами.\n";
-                std::cout << "Выберите метод перестановки: по кругу (a) - 1, крестом (b) - 2, по вертикали (c) - 3, по горизонтали (d) - 4: ";
+            case 2: "\n2. Give new matrix from the one from punkt 1\n";
+                std::cout << "Choose method of changing: to circle (a) - 1, to cross (b) - 2, vertical (c) - 3, horizontal (d) - 4: ";
                 std::cin >> change_number;
                 if (!std::cin) throw "ex";
                 switch (change_number)
@@ -1264,21 +1264,21 @@ int third_main()
                     show_matrix(arr, matrix_size);
                     break;
                 default:
-                    std::cout << "Неккоректное значение\n";
+                    std::cout << "You write wrong number\n";
                     break;
                 }
                 break;
-            case 3: std::cout << "3. Используя арифметику указателей, отсортировать элементы любой сортировкой.\n";
+            case 3: std::cout << "3. Sort elements.\n";
                 sort_matrix(arr, matrix_size);
                 break;
-            case 4: std::cout << "4. Уменьшает, увеличивает, умножает или делит все элементы матрицы на введенное пользователем число.\n";
-                std::cout << "Выберите операцию: уменьшить - 1, увеличить - 2, умножить - 3, поделить - 4: ";
+            case 4: std::cout << "4. Minus, plus, multiply and divide elements of matrix on a number written by user.\n";
+                std::cout << "Choose operaton: minus - 1, plus - 2, multiply - 3, divide - 4: ";
                 std::cin >> change_number;
                 if (!std::cin) throw "ex";
                 switch (change_number)
                 {
                 case 1:
-                    std::cout << "Выберите число: ";
+                    std::cout << "Write number: ";
                     std::cin >> operation_number;
                     if (!std::cin) throw "ex";
                     for (int i = 0; i < (matrix_size * matrix_size); i++)
@@ -1288,7 +1288,7 @@ int third_main()
                     show_matrix(arr, matrix_size);
                     break;
                 case 2:
-                    std::cout << "Выберите число: ";
+                    std::cout << "Write number: ";
                     std::cin >> operation_number;
                     if (!std::cin) throw "ex";
                     for (int i = 0; i < (matrix_size * matrix_size); i++)
@@ -1298,7 +1298,7 @@ int third_main()
                     show_matrix(arr, matrix_size);
                     break;
                 case 3:
-                    std::cout << "Выберите число: ";
+                    std::cout << "Write number: ";
                     std::cin >> operation_number;
                     if (!std::cin) throw "ex";
                     for (int i = 0; i < (matrix_size * matrix_size); i++)
@@ -1308,7 +1308,7 @@ int third_main()
                     show_matrix(arr, matrix_size);
                     break;
                 case 4:
-                    std::cout << "Выберите число: ";
+                    std::cout << "Write number: ";
                     std::cin >> operation_number;
                     if (!std::cin) throw "ex";
                     if (operation_number == 0) throw "ex";
@@ -1318,7 +1318,7 @@ int third_main()
                     }
                     show_matrix(arr, matrix_size);
                     break;
-                default: std::cout << "Неккоректное значение\n";
+                default: std::cout << "You write wrong number\n";
                     break;
                 }
                 break;
@@ -1327,7 +1327,7 @@ int third_main()
     }
     catch (...)
     {
-        std::cout << "\nНекорректные данные!\n";
+        std::cout << "\nYou write wrong number!\n";
     }
 }
 
@@ -1636,7 +1636,6 @@ int forth_main()
 int main()
 {
 	int number = 5;
-    setlocale(LC_ALL, "Russian");
 	try
 	{
 		while (number)
